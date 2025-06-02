@@ -1,11 +1,11 @@
 "use client";
 
-import { BreakingNews } from "@/components/BreakingNews";
-import { Categories } from "@/components/Categories";
-import { FeaturedStory } from "@/components/FeaturedStory";
-import { HeroSection } from "@/components/HeroSection";
-import { LatestNews } from "@/components/LatestNews";
-import { TopStories } from "@/components/TopStories";
+import Navbar from "../../app/components/navbar";
+import HeroSection from "../../app/components/sections/hero-section";
+import Services from "../../app/components/services";
+import Testimonials from "../../app/components/testimonials";
+import About from "../../app/components/about";
+import Footer from "../../app/components/footer";
 import Head from "next/head";
 
 export default function Home() {
@@ -50,12 +50,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <div className="min-h-screen bg-background">
+        <Navbar />
         <HeroSection />
-        <BreakingNews />
-        <FeaturedStory />
-        <TopStories />
-        <Categories />
-        <LatestNews />
+        <Services />
+        <Testimonials />
+        <About />
+        <Footer />
       </div>
     </>
   );
