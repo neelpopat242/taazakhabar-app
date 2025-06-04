@@ -7,46 +7,26 @@ import Testimonials from "../../app/components/testimonials";
 import About from "../../app/components/about";
 import Footer from "../../app/components/footer";
 import Head from "next/head";
+import metadata from "../../app/metadata.json";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>The Taaza Khabar | AI-Powered Real-Time News and Insights</title>
-        <meta
-          name="description"
-          content="Experience news reimagined with The Taaza Khabar. Stay updated with real-time AI-driven news, intelligent insights, and personalized content across various categories."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          property="og:title"
-          content="The Taaza Khabar | AI-Powered Real-Time News and Insights"
-        />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta property="og:title" content={metadata.openGraph.title} />
         <meta
           property="og:description"
-          content="Stay updated with AI-driven news, intelligent insights, and personalized content across various categories."
+          content={metadata.openGraph.description}
         />
-        <meta
-          property="og:image"
-          content="https://www.thetaazakhabar.com/path-to-your-image.jpg"
-        />
-        <meta property="og:url" content="https://www.thetaazakhabar.com/" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="The Taaza Khabar | AI-Powered Real-Time News and Insights"
-        />
-        <meta
-          name="twitter:description"
-          content="Stay updated with AI-driven news and personalized content across various categories."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.thetaazakhabar.com/path-to-your-image.jpg"
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.thetaazakhabar.com/" />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:locale" content={metadata.openGraph.locale} />
+        <meta property="og:type" content={metadata.openGraph.type} />
+        {/* Add other meta tags as needed */}
+        <link rel="canonical" href={metadata.openGraph.url} />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <div className="min-h-screen bg-background">
